@@ -1,9 +1,18 @@
-document.getElementById("H1").textContent = "This is Latin";
-document.getElementById("P1").textContent = "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur, quas ex sequi ducimus aspernatur temporibus!";
+const counterDisplay = document.getElementById("counter");
 
-let x = 69;
-let name = "Claw"
-let gpa = 8.26;
-console.log(x);
-console.log(`My name is ${name}`);
-console.log(`My gpa is ${gpa}`);
+let count = 0;
+
+document.getElementById("inc").onclick = function() {
+    count++;
+    document.getElementById("counter").textContent = count;
+}
+
+document.getElementById("dec").onclick = function() {
+    count--;
+    document.getElementById("counter").textContent = count;
+}
+
+document.getElementById("res").onclick = function() {
+    count = 0;
+    document.getElementById("counter").textContent = count;
+}
